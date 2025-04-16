@@ -12,3 +12,18 @@ Content-Type: application/json
   "gender": "male",
   "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQzg2-modiBeSBIckt_NcpipPPGQfZA_dbQ&s"
 }
+
+### Delete Friend by ID
+DELETE http://127.0.0.1:5000/api/friends/1
+
+### Update Friend By Id
+PUT http://127.0.0.1:5000/api/friends/1
+Content-Type: application/json
+
+{
+  "name": "Mustafa",
+  "role": "IT",
+  "description": "An experienced full-stack developer.",
+  "gender": "male",
+  "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQzg2-modiBeSBIckt_NcpipPPGQfZA_dbQ&s"
+}
