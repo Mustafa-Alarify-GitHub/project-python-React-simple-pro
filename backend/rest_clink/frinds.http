@@ -1,0 +1,14 @@
+### Get all friends
+GET http://127.0.0.1:5000/api/friends
+
+### Create new friend
+POST http://127.0.0.1:5000/api/friends
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "role": "Software Engineer",
+  "description": "An experienced full-stack developer.",
+  "gender": "male",
+  "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQzg2-modiBeSBIckt_NcpipPPGQfZA_dbQ&s"
+}
