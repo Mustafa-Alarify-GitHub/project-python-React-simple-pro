@@ -36,3 +36,22 @@ def create_friend():
             "message": "Error creating friend",
             "error": str(e)
         }), 500
+
+# Delete a Friend
+
+
+@app.route('/api/friends/<int:friend_id>', methods=['DELETE'])
+def delete_friend(friend_id):
+    try:
+        friend = Friend.query.get_or_404(friend_id)
+        db.session.delete(friend)
+        db.session.commit()
+        return jsonify({
+            "status": 200,
+            "message": "Friend deleted successfully"
+        })
+    except Exception as e:
+        return jsonify({
+            "message": "Error deleting friend",
+            "error": str(e)
+        }), 500
